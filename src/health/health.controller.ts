@@ -11,7 +11,7 @@ export class HealthController {
     const startTime = new Date(Date.now() - process.uptime()).toISOString();
     return response.status(HttpStatus.OK).send({
       available: true,
-      // app: name,
+      app: name,
       uptime: process.uptime(),
       serverId: `${hostname} ${process.pid}`,
       hostname,
